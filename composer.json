@@ -1,0 +1,17 @@
+{
+    "name": "microtime",
+    "description": "A simple way to get elapsed time between two points.",
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "authors": [{
+        "name": "Otávio Augusto Borges Pinto",
+        "email": "otaviobpinto@gmail.com"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "Microtime": ""
+        }
+    }
+}
