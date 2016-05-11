@@ -1,5 +1,5 @@
 {
-    "name": "microtime",
+    "name": "microtime/microtime",
     "description": "A simple way to get elapsed time between two points.",
     "require-dev": {
         "phpunit/phpunit": "*"
