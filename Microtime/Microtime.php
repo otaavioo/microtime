@@ -3,18 +3,16 @@ namespace Microtime;
 
 class Microtime
 {
-    protected $microtime;
+    private $microtime;
 
     public function __construct()
     {
         $this->microtime = $this->calcule();
     }
 
-    protected function calcule()
+    private function calcule()
     {
-        $microtime = microtime();
-        $microtime = explode(' ', $microtime);
-        return $microtime = $microtime[1] + $microtime[0];
+        return array_sum(explode(' ', microtime()));
     }
 
     public function elapsed()
