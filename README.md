@@ -4,7 +4,7 @@
 
 ```php
     // Instantiate the class
-    $microtime = new Microtime\Microtime();
+    $microtime = new \Microtime\Microtime();
 
     // code...
     sleep(1);
