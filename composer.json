@@ -1,6 +1,7 @@
 {
     "name": "microtime/microtime",
     "description": "A simple way to get elapsed time between two points.",
+    "license": "MIT",
     "require-dev": {
         "phpunit/phpunit": "*"
     },
