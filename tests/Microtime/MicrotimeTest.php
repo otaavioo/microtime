@@ -5,21 +5,27 @@ use Microtime\Microtime;
 
 class MicrotimeTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @test
-     */
-    public function itCanBeAMicrotimeInstance()
+    public $class;
+
+    public function setUp()
     {
-        $this->assertInstanceOf('Microtime\Microtime', new Microtime(), 'It must be an instance of Microtime\Microtime');
+        $this->class = new Microtime();
     }
 
-    /**
-     * @test
-     */
-    public function itCanReturnElapsedTimeBetweenTwoPoints()
+    public function testItCanBeAMicrotimeInstance()
     {
-        $class = new Microtime();
+        $this->assertInstanceOf('Microtime\Microtime', $this->class, 'It must be an instance of Microtime\Microtime');
+    }
+
+    public function testItCanReturnAMicrotimeInstance()
+    {
         sleep(1);
-        $this->assertGreaterThanOrEqual(1, $class->elapsed(), 'It must be greater than 0');
+        $this->assertInstanceOf('Microtime\Microtime', $this->class->elapsed(), 'It must be an instance of Microtime\Microtime');
+    }
+
+    public function testItCanReturnElapsedTimeBetweenTwoPoints()
+    {
+        sleep(1);
+        $this->assertGreaterThanOrEqual(1, $this->class->elapsed()->round(), 'It must be greater than 0');
     }
 }

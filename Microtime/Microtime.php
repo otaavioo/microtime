@@ -4,10 +4,13 @@ namespace Microtime;
 class Microtime
 {
     private $microtime;
+    private $elapsed;
 
     public function __construct()
     {
         $this->microtime = $this->calcule();
+
+        return $this;
     }
 
     private function calcule()
@@ -17,6 +20,12 @@ class Microtime
 
     public function elapsed()
     {
-        return round($this->calcule() - $this->microtime, 2);
+        $this->elapsed = $this->calcule() - $this->microtime;
+        return $this;
+    }
+
+    public function round($round = 2)
+    {
+        return round($this->elapsed, $round);
     }
 }
