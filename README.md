@@ -10,5 +10,5 @@
     sleep(1);
 
     // And then, get time elapsed
-    echo $microtime->elapsed();
+    echo $microtime->elapsed()->round();
 ```
