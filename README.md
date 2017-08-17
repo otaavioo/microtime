@@ -1,5 +1,10 @@
-##Microtime
-####Usage
+## Microtime
+
+#### Installing
+
+   ```composer requere microtime/microtime```
+
+#### Usage
 
 
 ```php
