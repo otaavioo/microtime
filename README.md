@@ -2,7 +2,7 @@
 
 #### Installing
 
-   ```composer requere microtime/microtime```
+   ```composer require microtime/microtime```
 
 #### Usage
 
